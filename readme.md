@@ -16,6 +16,7 @@
 - [Pipeline Walkthrough](#pipeline-walkthrough)
 - [Key Design Choices](#key-design-choices)
 - [Output Artifacts](#output-artifacts)
+- [Visualizations](#visualizations)
 - [Installation & Usage](#installation--usage)
 - [Dependencies](#dependencies)
 - [Future Work](#future-work)
@@ -211,6 +212,44 @@ This reduces RAM usage by ~97% on large full-skull volumes. `nearest_interp=True
 | `training_metrics.png` | Training loss and validation Dice over epochs |
 | `inference_visualization_N.png` | Side-by-side scan slice vs. model prediction per test patient |
 | `ToothFairy2F<patient_id>.nii.gz` | Full 3D segmentation mask at original voxel spacing |
+
+---
+
+## Visualizations
+
+> 3D segmentation predictions rendered in [3D Slicer](https://www.slicer.org/) on held-out test patients.
+
+### 🦷 FDI — Per-Tooth Instance Segmentation (32 classes)
+
+Each colour represents a distinct tooth mapped to its FDI number (classes 1–32). Background is suppressed.
+
+<video src="demos/023_FDI.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+### 🦴 Jaw Separation — Upper / Lower Jawbone Segmentation
+
+Two-class output separating the upper jawbone (maxilla) from the lower jawbone (mandible).
+
+<video src="demos/023_Jaw-Separation.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+### 🔩 Restoration — Implant / Crown / Bridge Detection
+
+Single-class output highlighting all detected dental restorations in the scan.
+
+<video src="demos/010_Restoration.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+> **Tip:** Videos can also be viewed in [3D Slicer](https://www.slicer.org/) or [ITK-SNAP](http://www.itksnap.org/) by loading the corresponding `.nii.gz` prediction files from the `predictions/` folder.
 
 ---
 
