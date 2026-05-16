@@ -54,7 +54,7 @@ ToothFairy2/
 ```
 
 
-## Dataset Used
+## Dataset
     
 
 | Property | Value |
@@ -223,9 +223,7 @@ This reduces RAM usage by ~97% on large full-skull volumes. `nearest_interp=True
 
 Each colour represents a distinct tooth mapped to its FDI number (classes 1–32). Background is suppressed.
 
-<video src="demos/023_FDI.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+![FDI Demo](demos/023_FDI.gif)
 
 ---
 
@@ -233,9 +231,7 @@ Each colour represents a distinct tooth mapped to its FDI number (classes 1–32
 
 Two-class output separating the upper jawbone (maxilla) from the lower jawbone (mandible).
 
-<video src="demos/023_Jaw-Separation.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+![Jaw Separation Demo](demos/023_Jaw-Separation.gif)
 
 ---
 
@@ -243,9 +239,7 @@ Two-class output separating the upper jawbone (maxilla) from the lower jawbone (
 
 Single-class output highlighting all detected dental restorations in the scan.
 
-<video src="demos/010_Restoration.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+![Restoration Demo](demos/010_Restoration.gif)
 
 ---
 
