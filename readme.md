@@ -54,7 +54,7 @@ ToothFairy2/
 ```
 
 
-## Dataset Used
+## Dataset
     
 
 | Property | Value |
